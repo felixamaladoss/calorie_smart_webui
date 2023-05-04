@@ -1,0 +1,83 @@
+body {
+    background-image: url('https://www.pexels.com/photo/view-of-cityscape-325185/');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-block-end: 5px;
+    padding: 2%;
+    background-color: #5c8bd1;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #090a0a;
+}
+
+.btn1 {
+    background-color: #5c8bd1;
+    border-color: #08090a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+p{
+    font-weight:bold;
+    text-align: center;
+    text-justify: auto;
+    flex-direction: column;
+}
+
+
+.btn2 {
+        background-color: #5c8bd1;
+        border-color: #08090a;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px 10px;
+        bottom: 10px;
+        cursor: pointer;
+        position: absolute;
+
+    }
+
+

@@ -1,9 +1,11 @@
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Dashboard</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
-        <a href="/report" class="nav-link" routerLink="Report">Report </a>
+        <a href="/home" class="nav-link" routerLink="home" *ngIf="isLoggedIn">Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a href="/report" class="nav-link" routerLink="report" *ngIf="isLoggedIn">Report </a>
       </li>
     </ul>
 
@@ -12,7 +14,7 @@
         <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
+        <a href="/login" class="nav-link" routerLink="login" *ngIf="!isLoggedIn">Login</a>
       </li>
     </ul>
 

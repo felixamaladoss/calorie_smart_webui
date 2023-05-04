@@ -5,6 +5,14 @@
     </h3>
   </header> 
   
+  <div class="profile-details">
+    <div class="profile-photo">
+      <img src="{{ photoUrl }}" alt="" />
+      <button class="btn1 btn-primary">Change Photo</button>
+  </div>
+
+  <div class="profile-info"></div>
+  <button class="btn2 btn-primary" (click)="openEditModal()">Edit</button>
   <p>
     <strong>Name :</strong>
     {{ currentUser.name }}
@@ -17,6 +25,22 @@
     <strong>Height :</strong>
     {{ currentUser.height }}
   </p>
+  <p>
+    <strong>Weight :</strong>
+    {{ currentUser.weight }}
+  </p>
+  <p>
+    <strong>Gender :</strong>
+    {{ currentUser.gender }}
+  </p>
+  <p>
+    <strong>Activity :</strong>
+    {{ currentUser.activity }}
+  </p>  
+  <p>
+    <strong>BMI :</strong>
+    {{ currentUser.bmi }}
+  </p>      
 </div>
 
 <ng-template #loggedOut>

@@ -10,6 +10,7 @@ import { UserService } from '../_services/user.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  photoUrl = '../assets/images/user-icon.png';
 
   constructor(private userService: UserService, private token: TokenStorageService) { }
 

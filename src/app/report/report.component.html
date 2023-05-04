@@ -1,0 +1,38 @@
+<div class="container">
+  <header class="jumbotron">
+    <h3>
+     <strong> Report </strong> 
+    </h3>
+  </header>
+  <div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td></td>
+          <td><div class="center">
+            <p style="text-align: right; margin-left: -88px;">BMI: 350g</p> 
+          </div></td>
+          <td></td>
+          <td> </td>
+          <td></td>
+          <td> </td>
+          <td><div class="center">
+            <p style="text-align: right; margin-left: -88px;">BMR: 350g</p> 
+          </div></td>
+        </tr>
+        </tbody>
+        </table>
+    
+  </div>
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="mbarChartLabels"
+            [options]="barChartOptions"
+            [colors]="barChartColors"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>

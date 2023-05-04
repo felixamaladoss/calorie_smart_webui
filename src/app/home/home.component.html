@@ -1,5 +1,151 @@
 <div class="container">
   <header class="jumbotron">
-    <p>{{ content }}</p>
+    <h3>
+     <strong> Dashboard </strong> 
+    </h3>
   </header>
+  <div>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td> </td>
+          <td></td>
+          <td> </td>
+          <td><div class="center">
+            <p style="text-align: right; margin-left: -88px;">BMR: 350g</p> 
+          </div></td>
+        </tr>
+        </tbody>
+        </table>
+    
+        <label> Date input </label> <br>
+        <input type="date" [valueAsDate]="dateObj" id="viewDate" (change)="dateObj = $event.target.valueAsDate" />
+        
+        <button class="btn btn-primary" (click)="view()">View</button>
+   
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Food Item</th>
+          <th>Food Type</th>
+          <th>Energy (kcal)</th>
+          <th>Carbs (g)</th>
+          <th>Fat (g)</th>
+          <th>Sugar (g)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let o of contentArray">
+          <td>{{o.foodItem}}</td>
+          <td>{{o.foodType}}</td>
+          <td>{{o.energy}}</td>
+          <td>{{o.carbs}}</td>
+          <td>{{o.fat}}</td>
+          <td>{{o.sugar}}</td>
+          <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+        </tr>
+        <tr><br></tr>
+        <tr><p>Add Food intake</p></tr>
+        <tr>
+          <td>Food Item</td>
+          <td>Food Type</td>
+          <td>Energy (kcal)</td>
+          <td>Carbs (g)</td>
+          <td>Fat (g)</td>
+          <td>Sugar (g)</td>
+        </tr>
+        <tr><td><input
+          type="text"
+          class="form-control"
+          name="foodItem"
+          [(ngModel)]="foodItem"
+          required
+          minlength="3"
+          maxlength="300"
+          #name="ngModel"
+        /></td><td><input
+          type="text"
+          class="form-control"
+          name="foodType"
+          [(ngModel)]="foodType"
+          required
+          minlength="3"
+          maxlength="300"
+          #name="ngModel"
+        /></td><td><input
+          type="text"
+          class="form-control"
+          name="energy"
+          [(ngModel)]="energy"
+          required
+          minlength="3"
+          maxlength="40"
+          #name="ngModel"
+        /></td>
+        <td><input
+          type="text"
+          class="form-control"
+          name="carbs"
+          [(ngModel)]="carbs"
+          required
+          minlength="3"
+          maxlength="40"
+          #name="ngModel"
+        /></td>
+        <td><input
+          type="text"
+          class="form-control"
+          name="fat"
+          [(ngModel)]="fat"
+          required
+          minlength="3"
+          maxlength="40"
+          #name="ngModel"
+        /></td>
+        <td><input
+          type="text"
+          class="form-control"
+          name="sugar"
+          [(ngModel)]="sugar"
+          required
+          minlength="3"
+          maxlength="40"
+          #name="ngModel"
+        /></td>
+      </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td> <button class="btn btn-primary btn-block">Add</button></td>
+        </tr>
+          <tr><br></tr>
+        <tr><p>Add Water intake</p>
+          <td></td>
+          <td><p>Total Water intake</p> </td></tr>
+        <tr><td><input
+          type="text"
+          class="form-control"
+          name="water"
+          [(ngModel)]="water"
+          required
+          minlength="3"
+          maxlength="300"
+          #name="ngModel"
+        />
+      </td>
+      <td><button class="btn btn-primary btn-block">Add</button></td>
+      <td><p>3 Litre</p></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+  
+    </table>
+  </div>
+ 
 </div>

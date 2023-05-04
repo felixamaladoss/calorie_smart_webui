@@ -81,13 +81,13 @@ p{
     }
 
 
-.center {
-  background: #ebe4e2;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  padding-left: 100px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
+    .center {
+        background: #ebe4e2;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding-left: 100px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
